@@ -17,7 +17,7 @@
  * @param {object=} [options=undefined]
  * @param {boolean=} [options.always_evaluate=false] If true, evaluates the script even if it was included before.
  */
-declare function include(path: string, options?: object): void;
+declare function include(path: string, options?: { always_evaluate?: boolean } | undefined): void;
 
 /**
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout}.
@@ -335,7 +335,7 @@ declare let fb: {
      * @example
      * // @see samples/basic/DragnDrop.txt
      */
-    DoDragDrop: (window_id: number, handle_list: FbMetadbHandleList, effect: number, options?: { show_text?: boolean, use_album_art?: boolean, use_theming?: boolean, custom_image?: GdiBitmap }) => number;
+    DoDragDrop: (window_id: number, handle_list: FbMetadbHandleList, effect: number, options?: { show_text?: boolean, use_album_art?: boolean, use_theming?: boolean, custom_image?: GdiBitmap } | undefined) => number;
     /** @method */
     Exit: () => void;
     /**
@@ -1392,7 +1392,7 @@ declare let utils: {
      * @example <caption>Dialog from file</caption>
      * utils.ShowHtmlDialog(window.ID, `file://${fb.ComponentPath}samples/basic/html/PopupWithCheckBox.html`);
      */
-    ShowHtmlDialog: (window_id: number, code_or_path: string, options?: { width?: number, height?: number, x?: number, y?: number, center?: boolean, context_menu?: boolean, resizable?: boolean, selection?: boolean, scroll?: boolean, data?: number | string | boolean | null | undefined }) => void;
+    ShowHtmlDialog: (window_id: number, code_or_path: string, options?: { width?: number, height?: number, x?: number, y?: number, center?: boolean, context_menu?: boolean, resizable?: boolean, selection?: boolean, scroll?: boolean, data?: number | string | boolean | null | undefined } | undefined) => void;
     /**
      * @param {string} filename
      * @param {string} section
@@ -1580,7 +1580,7 @@ declare const window: {
      * @param {object=} [options.features=undefined] Additional script features
      * @param {boolean=} [options.features.drag_n_drop=false] Indicates if drag_n_drop functionality should be enabled
      */
-    DefinePanel: (name: string, options?: { author?: string, version?: string, features?: { drag_n_drop?: boolean } }) => void;
+    DefinePanel: (name: string, options?: { author?: string, version?: string, features?: { drag_n_drop?: boolean } | undefined }) => void;
     /**
      * @return {MenuObject}
      *
