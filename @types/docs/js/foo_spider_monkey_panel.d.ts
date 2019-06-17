@@ -2625,6 +2625,16 @@ declare class GdiBitmap {
 declare class GdiFont {
 
     /**
+     * Constructor may fail if font is not present.
+     *
+     * @constructor
+     * @param {string} name
+     * @param {number} size_px See Helper.js > Point2Pixel function for conversions
+     * @param {number=} [style=0] See Flags.js > FontStyle
+     */
+    constructor(name: string, size_px: number, style?: number);
+
+    /**
      * @type {number}
      * @readonly
      *
