@@ -105,7 +105,7 @@ declare function on_font_changed(): void;
  * @param {?GdiBitmap} image null on failure
  * @param {string} image_path path to image file (or music file if image is embedded)
  */
-declare function on_get_album_art_done(handle: FbMetadbHandle, art_id: any, image: any, image_path: any): void;
+declare function on_get_album_art_done(handle: FbMetadbHandle, art_id: number, image: GdiBitmap | null, image_path: string): void;
 
 /**
  * @description Called when focused item in playlist has been changed.
