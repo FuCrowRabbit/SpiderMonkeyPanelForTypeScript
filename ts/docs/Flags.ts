@@ -149,151 +149,151 @@ const TTDT_INITIAL = 3;
 
 // Used in gdi.Font(), can be combined
 // For more information, see: http://msdn.microsoft.com/en-us/library/ms534124(VS.85).aspx
-const FontStyle = {
-    Regular: 0,
-    Bold: 1,
-    Italic: 2,
-    BoldItalic: 3,
-    Underline: 4,
-    Strikeout: 8
-};
+enum FontStyle {
+    Regular = 0,
+    Bold = 1,
+    Italic = 2,
+    BoldItalic = 3,
+    Underline = 4,
+    Strikeout = 8
+}
 
 // Used in SetTextRenderingHint()
 // For more information, see: http://msdn.microsoft.com/en-us/library/ms534404(VS.85).aspx
-const TextRenderingHint = {
-    SystemDefault: 0,
-    SingleBitPerPixelGridFit: 1,
-    SingleBitPerPixel: 2,
-    AntiAliasGridFit: 3,
-    AntiAlias: 4,
-    ClearTypeGridFit: 5
-};
+enum TextRenderingHint {
+    SystemDefault = 0,
+    SingleBitPerPixelGridFit = 1,
+    SingleBitPerPixel = 2,
+    AntiAliasGridFit = 3,
+    AntiAlias = 4,
+    ClearTypeGridFit = 5
+}
 
 // Used in SetSmoothingMode()
 // For more information, see: http://msdn.microsoft.com/en-us/library/ms534173(VS.85).aspx
-const SmoothingMode = {
-    Invalid: -1,
-    Default: 0,
-    HighSpeed: 1,
-    HighQuality: 2,
-    None: 3,
-    AntiAlias: 4
-};
+enum SmoothingMode {
+    Invalid = -1,
+    Default = 0,
+    HighSpeed = 1,
+    HighQuality = 2,
+    None = 3,
+    AntiAlias = 4
+}
 
 // Used in SetInterpolationMode()
 // For more information, see: http://msdn.microsoft.com/en-us/library/ms534141(VS.85).aspx
-const InterpolationMode = {
-    Invalid: -1,
-    Default: 0,
-    LowQuality: 1,
-    HighQuality: 2,
-    Bilinear: 3,
-    Bicubic: 4,
-    NearestNeighbor: 5,
-    HighQualityBilinear: 6,
-    HighQualityBicubic: 7
-};
+enum InterpolationMode {
+    Invalid = -1,
+    Default = 0,
+    LowQuality = 1,
+    HighQuality = 2,
+    Bilinear = 3,
+    Bicubic = 4,
+    NearestNeighbor = 5,
+    HighQualityBilinear = 6,
+    HighQualityBicubic = 7
+}
 
 // Used in RotateFlip()
 // For more information, see: http://msdn.microsoft.com/en-us/library/ms534171(VS.85).aspx
-const RotateFlipType = {
-    RotateNoneFlipNone: 0,
-    Rotate90FlipNone: 1,
-    Rotate180FlipNone: 2,
-    Rotate270FlipNone: 3,
+enum RotateFlipType {
+    RotateNoneFlipNone = 0,
+    Rotate90FlipNone = 1,
+    Rotate180FlipNone = 2,
+    Rotate270FlipNone = 3,
 
-    RotateNoneFlipX: 4,
-    Rotate90FlipX: 5,
-    Rotate180FlipX: 6,
-    Rotate270FlipX: 7,
+    RotateNoneFlipX = 4,
+    Rotate90FlipX = 5,
+    Rotate180FlipX = 6,
+    Rotate270FlipX = 7,
 
-    RotateNoneFlipY: 6,
-    Rotate90FlipY: 7,
-    Rotate180FlipY: 4,
-    Rotate270FlipY: 5,
+    RotateNoneFlipY = 6,
+    Rotate90FlipY = 7,
+    Rotate180FlipY = 4,
+    Rotate270FlipY = 5,
 
-    RotateNoneFlipXY: 2,
-    Rotate90FlipXY: 3,
-    Rotate180FlipXY: 0,
-    Rotate270FlipXY: 1
-};
+    RotateNoneFlipXY = 2,
+    Rotate90FlipXY = 3,
+    Rotate180FlipXY = 0,
+    Rotate270FlipXY = 1
+}
 
 // h_align/v_align:
 // http://msdn.microsoft.com/en-us/library/ms534177(VS.85).aspx
-const StringAlignment = {
-    Near: 0,
-    Center: 1,
-    Far: 2
-};
+enum StringAlignment {
+    Near = 0,
+    Center = 1,
+    Far = 2
+}
 
 // trimming:
 // http://msdn.microsoft.com/en-us/library/ms534403(VS.85).aspx
-const StringTrimming = {
-    None: 0,
-    Character: 1,
-    Word: 2,
-    EllipsisCharacter: 3,
-    EllipsisWord: 4,
-    EllipsisPath: 5
-};
+enum StringTrimming {
+    None = 0,
+    Character = 1,
+    Word = 2,
+    EllipsisCharacter = 3,
+    EllipsisWord = 4,
+    EllipsisPath = 5
+}
 
 // flags, can be combined of:
 // http://msdn.microsoft.com/en-us/library/ms534181(VS.85).aspx
-const StringFormatFlags = {
-    DirectionRightToLeft: 0x00000001,
-    DirectionVertical: 0x00000002,
-    NoFitBlackBox: 0x00000004,
-    DisplayFormatControl: 0x00000020,
-    NoFontFallback: 0x00000400,
-    MeasureTrailingSpaces: 0x00000800,
-    NoWrap: 0x00001000,
-    LineLimit: 0x00002000,
-    NoClip: 0x00004000
-};
+enum StringFormatFlags {
+    DirectionRightToLeft = 0x00000001,
+    DirectionVertical = 0x00000002,
+    NoFitBlackBox = 0x00000004,
+    DisplayFormatControl = 0x00000020,
+    NoFontFallback = 0x00000400,
+    MeasureTrailingSpaces = 0x00000800,
+    NoWrap = 0x00001000,
+    LineLimit = 0x00002000,
+    NoClip = 0x00004000
+}
 
 // Used in utils.GetAlbumArt()
-const AlbumArtId = {
-    front: 0,
-    back: 1,
-    disc: 2,
-    icon: 3,
-    artist: 4
-};
+enum AlbumArtId {
+    front = 0,
+    back = 1,
+    disc = 2,
+    icon = 3,
+    artist = 4
+}
 
 // Used in window.GetColourCUI()
-const ColourTypeCUI = {
-    text: 0,
-    selection_text: 1,
-    inactive_selection_text: 2,
-    background: 3,
-    selection_background: 4,
-    inactive_selection_background: 5,
-    active_item_frame: 6
-};
+enum ColourTypeCUI {
+    text = 0,
+    selection_text = 1,
+    inactive_selection_text = 2,
+    background = 3,
+    selection_background = 4,
+    inactive_selection_background = 5,
+    active_item_frame = 6
+}
 
 // Used in window.GetFontCUI()
-const FontTypeCUI = {
-    items: 0,
-    labels: 1
-};
+enum FontTypeCUI {
+    items = 0,
+    labels = 1
+}
 
 // Used in window.GetColourDUI()
-const ColourTypeDUI = {
-    text: 0,
-    background: 1,
-    highlight: 2,
-    selection: 3
-};
+enum ColourTypeDUI {
+    text = 0,
+    background = 1,
+    highlight = 2,
+    selection = 3
+}
 
 // Used in window.GetFontDUI()
-const FontTypeDUI = {
-    defaults: 0,
-    tabs: 1,
-    lists: 2,
-    playlists: 3,
-    statusbar: 4,
-    console: 5
-};
+enum FontTypeDUI {
+    defaults = 0,
+    tabs = 1,
+    lists = 2,
+    playlists = 3,
+    statusbar = 4,
+    console = 5
+}
 
 /*
 SupportColourFlagCUI = {

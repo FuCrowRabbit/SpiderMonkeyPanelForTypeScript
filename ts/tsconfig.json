@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "es2015",
+    "lib": [
+      "es2016.array.include",
+      "es2015",
+      "es2015.core",
+      "es2015.collection",
+      "es2015.iterable",
+      "es2015.generator",
+      "es2015.promise",
+      "es2015.proxy",
+      "es2015.reflect",
+      "es2015.symbol",
+      "es2015.symbol.wellknown"
+    ]
+  }
+}
