@@ -209,24 +209,24 @@ declare let fb: {
      * @example
      * console.log(fb.ComponentPath); // C:\Users\User\AppData\Roaming\foobar2000\user-components\foo_spider_monkey_panel\
      */
-    ComponentPath: string;
+    readonly ComponentPath: string;
     /** @type {boolean} */
     CursorFollowPlayback: boolean;
     /**
      * @type {string}
      * @readonly
      */
-    FoobarPath: string;
+    readonly FoobarPath: string;
     /**
      * @type {boolean}
      * @readonly
      */
-    IsPaused: boolean;
+    readonly IsPaused: boolean;
     /**
      * @type {boolean}
      * @readonly
      */
-    IsPlaying: boolean;
+    readonly IsPlaying: boolean;
     /** @type {boolean} */
     PlaybackFollowCursor: boolean;
     /**
@@ -239,7 +239,7 @@ declare let fb: {
      * @example
      * console.log(Math.round(fb.PlaybackLength)); // 323
      */
-    PlaybackLength: number;
+    readonly PlaybackLength: number;
     /**
      * @type {float}
      *
@@ -251,7 +251,7 @@ declare let fb: {
      * @type {string}
      * @readonly
      */
-    ProfilePath: undefined;
+    readonly ProfilePath: string;
     /**
      * 0 - None<br>
      * 1 - Track<br>
@@ -1508,7 +1508,7 @@ declare const window: {
      * @type {number}
      * @readonly
      */
-    ID: number;
+    readonly ID: number;
     /**
      * You need this to determine which GetFontXXX and GetColourXXX methods to use, assuming you want to support both interfaces.<br>
      * <br>
@@ -1518,7 +1518,7 @@ declare const window: {
      * @type {UIModuleType}
      * @readonly
      */
-    InstanceType: UIModuleType;
+    readonly InstanceType: UIModuleType;
     /**
      * Only useful within Panel Stack Splitter (Columns UI component)<br>
      * Depends on setting inside Spider Monkey Panel Configuration window. You generally use it to determine
@@ -1527,17 +1527,17 @@ declare const window: {
      * @type {boolean}
      * @readonly
      */
-    IsTransparent: boolean;
+    readonly IsTransparent: boolean;
     /**
      * @type {boolean}
      * @readonly
      */
-    IsVisible: boolean;
+    readonly IsVisible: boolean;
     /**
      * @type {number}
      * @readonly
      */
-    Height: number;
+    readonly Height: number;
     /**
      * {@link window.MaxHeight}, {@link window.MaxWidth}, {@link window.MinHeight} and {@link window.MinWidth} can be used to lock the panel size.<br>
      * Do not use if panels are contained within Panel Stack Splitter (Columns UI component).
@@ -1558,7 +1558,7 @@ declare const window: {
      * @type {number}
      * @readonly
      */
-    MemoryLimit: number;
+    readonly MemoryLimit: number;
     /**
      * @see {@link window.MaxHeight}.
      *
@@ -1970,7 +1970,7 @@ declare class FbMetadbHandleList {
      * plman.GetPlaylistItems(plman.ActivePlaylist);
      * console.log(handle_list.Count);
      */
-    Count: number; // (uint) (read)
+    readonly Count: number; // (uint) (read)
 
     /**
      * @param {FbMetadbHandle} handle
@@ -2538,13 +2538,13 @@ declare class GdiBitmap {
      * @type {number}
      * @readonly
      */
-    Height: number;// (uint) (read)
+    readonly Height: number;// (uint) (read)
 
     /**
      * @type {number}
      * @readonly
      */
-    Width: number;// (uint) (read)
+    readonly Width: number;// (uint) (read)
 
     /**
      * @param {number} alpha Valid values 0-255.
@@ -3001,7 +3001,7 @@ declare type MeasureStringInfo = {
      * @type {number}
      * @readonly
      */
-    Chars: number; // (uint) (read)
+    readonly Chars: number; // (uint) (read)
 
     /**
      * @type {float}
