@@ -1962,7 +1962,7 @@ declare class FbMetadbHandleList {
      * @constructor
      * @param {FbMetadbHandleList | FbMetadbHandle | Array<FbMetadbHandle> | null | undefined} arg
      */
-    constructor(arg: FbMetadbHandleList | FbMetadbHandle | Array<FbMetadbHandle> | null | undefined);
+    constructor(arg?: FbMetadbHandleList | FbMetadbHandle | Array<FbMetadbHandle> | null | undefined);
 
     /**
      * @type {number}
