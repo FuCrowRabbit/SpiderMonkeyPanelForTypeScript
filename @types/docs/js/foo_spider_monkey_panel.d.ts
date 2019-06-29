@@ -38,21 +38,23 @@ declare function clearInterval(timerID: number): void // (void)
  *
  * @param {function()} func
  * @param {number} delay
+ * @param {...*} func_args
  * @return {number}
  */
-declare function setInterval(func: () => void, delay: number): number // (uint)
+declare function setInterval(func: (...args: any[]) => void, delay: number, func_args: any[]): number // (uint)
 
 /**
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout}.
  *
  * @param {function()} func
  * @param {number} delay
+ * @param {...*} func_args
  * @return {number}
  *
  * @example
  * // @see samples\basic\Timer.txt
  */
-declare function setTimeout(func: () => void, delay: number): number // (uint)
+declare function setTimeout(func: (...args: any[]) => void, delay: number, func_args: any[]): number // (uint)
 
 /**
  *  Load ActiveX object.
