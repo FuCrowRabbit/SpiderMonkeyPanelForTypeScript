@@ -18,8 +18,5 @@ Spider Monkey Panel v1.2.1
 2. define `@types/samples/*`
 3. write `ts/samples/*`
 
-## Final Goal
-The goal is to send Pull Request to the Spider Monkey Panel.
-
 ## Credits
 + [TheQwertiest](https://github.com/TheQwertiest): [Spider Monkey Panel](https://github.com/TheQwertiest/foo_spider_monkey_panel)
