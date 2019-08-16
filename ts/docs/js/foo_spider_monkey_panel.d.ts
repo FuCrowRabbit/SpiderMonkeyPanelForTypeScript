@@ -1875,9 +1875,9 @@ declare class FbMetadbHandle {
     Compare: (handle: FbMetadbHandle) => boolean; // (boolean)
 
     /**
-     * @return {FbFileInfo}
+     * @return {?FbFileInfo} null if file info is not available.
      */
-    GetFileInfo: () => FbFileInfo// (FbFileInfo)
+    GetFileInfo: () => FbFileInfo | null // (FbFileInfo)
 }
 
 declare class FbFileInfo {
@@ -1888,7 +1888,9 @@ declare class FbFileInfo {
      * @example
      * let handle = fb.GetFocusItem();
      * let file_info = handle.GetFileInfo();
-     * console.log(file_info.MetaCount); // 11
+     * if (file_info) {
+     *     console.log(file_info.MetaCount); // 11
+     * }
      */
     readonly MetaCount: number; // (read)
 
