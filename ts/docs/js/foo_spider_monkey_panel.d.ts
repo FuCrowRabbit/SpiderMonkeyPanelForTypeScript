@@ -2930,7 +2930,10 @@ declare class GdiGraphics {
      * this will result in visual artifacts caused by ClearType hinting.<br>
      * Use {@link GdiGraphics#DrawString} instead in such cases.<br>
      * <br>
-     * To calculate text dimensions use {@link GdiGraphics#CalcTextHeight}, {@link GdiGraphics#CalcTextWidth} or DT_CALCRECT flag.
+     * To calculate text dimensions use {@link GdiGraphics#CalcTextHeight}, {@link GdiGraphics#CalcTextWidth} or DT_CALCRECT flag.<br>
+     * <br>
+     * Note: uses special rules for `&` character by default, which consumes the `&` and causes the next character to be underscored.
+     * This behaviour can be changed (or disabled) via `format` parameter.
      *
      * @param {string} str
      * @param {GdiFont} font
